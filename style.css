@@ -1,3 +1,52 @@
-* {
-    background-color: aqua;
+body {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+#buttons {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+button {
+    background-color: grey;
+    font-size: 40px;
+    border-radius: 7px;
+}
+
+#gridContainer {
+    background-color: red;
+    width: 750px;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    padding: 50px;
+    border-radius: 7px;
+}
+
+.row { 
+    display: flex;
+    align-content: stretch;
+    flex-grow: 1;
+}
+
+.block {
+    /*border: 2px solid black;*/
+    display: flex;
+    flex-grow: 1;
+    font-size: large;
+    justify-content: center;
+    text-justify: distribute;
+}
+
+.block {
+    background-color: grey;
 }
