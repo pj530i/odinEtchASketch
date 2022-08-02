@@ -17,7 +17,8 @@ body {
 button {
     background-color: grey;
     font-size: 40px;
-    border-radius: 7px;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 #gridContainer {
@@ -29,7 +30,7 @@ button {
     align-items: stretch;
     justify-content: center;
     padding: 50px;
-    border-radius: 7px;
+    border-radius: 20px;
 }
 
 .row { 

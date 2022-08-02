@@ -28,6 +28,17 @@ function initButtons() {
     });
 }
 
+function changeColor(event) {
+    const toggleBtn = document.querySelector('#toggle');
+    const block = event.target;
+    if(toggleBtn.classList.contains('rainbow')) {
+    // Random color
+        block.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    } else {
+        block.style.backgroundColor = 'black';
+    }
+}
+
 function createGrid(gridSize) {
     const container = document.querySelector('#gridContainer');
 
@@ -42,15 +53,7 @@ function createGrid(gridSize) {
         {
             const newBlock = document.createElement('div');
             newBlock.classList += 'block';
-            newBlock.addEventListener('mouseover', (event) => {
-                const toggleBtn = document.querySelector('#toggle');
-                if(toggleBtn.classList.contains('rainbow')) {
-                // Random color
-                    newBlock.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
-                } else {
-                    newBlock.style.backgroundColor = 'black';
-                }
-            });
+            newBlock.addEventListener('mouseover', changeColor);
             newRow.appendChild(newBlock);
         }
         container.appendChild(newRow);
